@@ -37,12 +37,13 @@ namespace SafeAreaK {
   Insets getInsets() {
     Insets insets;
 
-    // Safe area is on available on iOS 11 and later.
+    // Safe area is only available on iOS 11 and later.
     if (@available(iOS 11, *)) {
       UIWindow *window = [[UIApplication sharedApplication] keyWindow];
       UIView *view = window.rootViewController.view;
       UIEdgeInsets safeAreaInsets = view.safeAreaInsets;
-
+      
+      // Insets are in screen pixels.
       insets.top = safeAreaInsets.top * view.contentScaleFactor;
       insets.bottom = safeAreaInsets.bottom * view.contentScaleFactor;
       insets.left = safeAreaInsets.left * view.contentScaleFactor;

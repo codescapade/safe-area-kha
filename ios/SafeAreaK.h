@@ -33,6 +33,7 @@ namespace SafeAreaK {
    * Insets class for the return values.
    */
   class Insets {
+    
   public:
     int left;
     int right;
