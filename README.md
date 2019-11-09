@@ -1,6 +1,6 @@
 # Safe Area Kha
 
-Kha library to get the safe area on iOS devices.
+Kha library to get the safe area on iOS devices so you can check where the notch is. Only works on iOS 11+. On older versions of iOS the insets return 0.
 
 
 ## Installation
