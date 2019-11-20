@@ -23,7 +23,7 @@
 
 package safeArea;
 
-#if (sys_ios)
+#if sys_ios
 @:headerCode('#include "SafeAreaK.h"')
 #end
 
@@ -34,11 +34,11 @@ class SafeArea {
   /**
    * Return the safe insets in pixels (maybe?).
    */
-  #if (sys_ios)
+  #if sys_ios
 	@:functionCode('return SafeAreaK::getInsets();')
 	#end
   public static function getInsets(): Insets {
-    #if (sys_ios)
+    #if sys_ios
     return Insets.create();
     #else
     // Return zero insets when not on iOS.
@@ -50,7 +50,7 @@ class SafeArea {
 /**
  * Insets type.
  */
-#if (sys_ios)
+#if sys_ios
 @:structAccess
 @:native('SafeAreaK::Insets')
 extern class Insets {
