@@ -6,7 +6,7 @@ Kha library to get the safe area on iOS devices so you can check where the notch
 ## Installation
 Clone this repository into the Libraries folder of your Kha project and add the following line to your khafile.js:  
 ```
-project.addLibrary('safeArea');
+project.addLibrary('safe-area-kha');
 ```
 
 ## Usage
